@@ -1,15 +1,17 @@
 package cb.cookbook.modell;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 public class Ingredient {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    private BigDecimal amount;
+    private String unitName;
     private boolean alreadyGot;
 
     @ManyToOne

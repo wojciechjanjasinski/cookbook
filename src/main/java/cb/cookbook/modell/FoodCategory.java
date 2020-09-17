@@ -14,4 +14,5 @@ public enum FoodCategory {
     AMERYKANSKA,
     KANADYJSKA,
     MEKSYKANSKA,
+    SLODKIE
 }

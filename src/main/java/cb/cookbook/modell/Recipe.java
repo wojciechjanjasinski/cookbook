@@ -1,6 +1,7 @@
 package cb.cookbook.modell;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +11,7 @@ public class Recipe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String dishName;
 
     @Enumerated(EnumType.STRING)
     private FoodCategory foodCategory;
@@ -19,7 +21,7 @@ public class Recipe {
     @Enumerated(EnumType.STRING)
     private DifficultyLevel difficultyLevel;
 
-    private Integer time;
+    private BigDecimal time;
 
     @OneToMany(mappedBy = "recipe")
     List<Ingredient> ingredientsList;
