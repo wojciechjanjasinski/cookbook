@@ -1,11 +1,18 @@
 package cb.cookbook.modell;
 
+import lombok.*;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class Recipe {
 
     @Id
@@ -15,8 +22,6 @@ public class Recipe {
 
     @Enumerated(EnumType.STRING)
     private FoodCategory foodCategory;
-
-    private boolean iLikeIt;
 
     @Enumerated(EnumType.STRING)
     private DifficultyLevel difficultyLevel;

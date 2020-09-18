@@ -1,8 +1,15 @@
 package cb.cookbook.modell;
 
+import lombok.*;
+
 import javax.persistence.*;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class Step {
 
     @Id
